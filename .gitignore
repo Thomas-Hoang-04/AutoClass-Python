@@ -190,6 +190,7 @@ pyrightconfig.json
 # Keys and test data
 *.bin
 *.txt
+*_env.py
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
