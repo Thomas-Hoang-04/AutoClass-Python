@@ -192,6 +192,9 @@ pyrightconfig.json
 *.txt
 *_env.py
 
+# Production WebDriver 
+*/
+
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
