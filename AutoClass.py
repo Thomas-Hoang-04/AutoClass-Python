@@ -57,7 +57,7 @@ class UserManagement:
                     print("\n--Đang tự hủy chương trình--")
                     return "F"
         except:
-            return False
+            return "F"
 
     def createUser(self):
         print("\n--Cảm ơn bạn đã tin dùng dịch vụ của AutoClass--")
