@@ -45,13 +45,17 @@ class UserManagement:
                     f_usr.close()
                 os.chmod("USER_DATA.bin", S_IRUSR)
                 return True
-            elif len(index) != 2:
-                os.remove(".env")
-                os.remove("ENCRYPT_KEY.bin")
-                print("\n--Lỗi an ninh nghiêm trọng--")
-                print("--Vui lòng liên hệ nhà phát hành để khắc phục--")
-                print("\n--Đang tự hủy chương trình--")
-                return "F"
+            else:
+                try:
+                    with open("USER_DATA.bin", "rb") as f_usr:
+                        f_usr.close()
+                except:
+                    os.remove(".env")
+                    os.remove("ENCRYPT_KEY.bin")
+                    print("\n--Lỗi an ninh nghiêm trọng--")
+                    print("--Vui lòng liên hệ nhà phát hành để khắc phục--")
+                    print("\n--Đang tự hủy chương trình--")
+                    return "F"
         except:
             return False
 
